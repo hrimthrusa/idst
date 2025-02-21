@@ -4,9 +4,6 @@ FROM maven:3-openjdk-17 AS builder
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Клонируем репозиторий
-COPY . /app
-
 # Клонируем репозиторий в контейнер
 RUN git clone https://github.com/hrimthrusa/idst.git .
 
