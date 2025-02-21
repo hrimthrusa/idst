@@ -31,4 +31,10 @@ public class CalculatorServiceTest {
         assertEquals(1, result);
     }
 
+    @Test
+    void testMultiply() {
+        int result = calculatorService.multiply(3, 2);
+        assertEquals(6, result);
+    }
+
 }
