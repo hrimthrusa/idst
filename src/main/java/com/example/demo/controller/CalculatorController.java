@@ -14,19 +14,16 @@ public class CalculatorController {
     CalculatorService calculatorService;
 
     @GetMapping("/add")
-    @ResponseBody
     public int add(@RequestParam int a, @RequestParam int b) {
         return calculatorService.add(a, b);
     }
 
     @GetMapping("/subtract")
-    @ResponseBody
     public int subtract(@RequestParam int a, @RequestParam int b) {
         return calculatorService.subtract(a, b);
     }
 
     @GetMapping("/multiply")
-    @ResponseBody
     public int multiply(@RequestParam int a, @RequestParam int b) {
         return calculatorService.multiply(a, b);
     }
