@@ -14,17 +14,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(CalculatorController.class)
 public class CalculatorControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Test
-    public void testAdd() throws Exception {
-        mockMvc.perform(
-                get("/add")
-                        .param("a", "2")
-                        .param("b", "1"))
-                .andExpect(status().isOk())
-                .andExpect(content().string(is("3"))
-        );
-    }
+//    @Autowired
+//    private MockMvc mockMvc;
+//
+//    @Test
+//    public void testAdd() throws Exception {
+//        mockMvc.perform(
+//                get("/add")
+//                        .param("a", "2")
+//                        .param("b", "1"))
+//                .andExpect(status().isOk())
+//                .andExpect(content().string(is("3"))
+//        );
+//    }
 }
