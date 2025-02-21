@@ -1,5 +1,5 @@
 # Используем официальный образ Maven для сборки
-FROM maven:3.8.6-openjdk-17 AS builder
+FROM maven:3-openjdk-17 AS builder
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
