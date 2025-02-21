@@ -1,15 +1,17 @@
-FROM openjdk:17-jdk-slim
+# Используем официальный образ Maven для сборки
+FROM maven:3.8.6-openjdk-17 AS builder
 
-# workdir inside of the container
-
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-# copy our project into the container
+# Клонируем репозиторий в контейнер
+RUN git clone https://github.com/hrimthrusa/idst.git .
 
-COPY target/*.jar app.jar
+# Собираем проект
+RUN mvn clean install
 
+# Указываем порт, который будет слушать приложение
 EXPOSE 8080
 
-# the start of the Spring app
-
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Запускаем приложение
+CMD ["java", "-jar", "target/springboot-app.jar"]
