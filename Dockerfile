@@ -7,6 +7,7 @@ WORKDIR /app
 # Клонируем репозиторий в контейнер
 RUN git clone https://github.com/hrimthrusa/idst.git .
 
+
 # Собираем проект
 RUN mvn clean install
 
