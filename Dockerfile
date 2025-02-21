@@ -9,7 +9,6 @@ RUN git clone https://github.com/hrimthrusa/idst.git .
 
 # Собираем проект
 RUN mvn clean install
-
 # Указываем порт, который будет слушать приложение
 EXPOSE 8080
 
