@@ -13,5 +13,6 @@ RUN mvn clean install
 EXPOSE 8080
 
 
+
 # Запускаем приложение
 CMD ["java", "-jar", "/app/target/demo-0.0.1-SNAPSHOT.jar"]
